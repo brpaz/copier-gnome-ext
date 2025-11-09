@@ -1,0 +1,51 @@
+{
+  "name": "{{ extension_name|lower|replace(' ', '-')}}",
+  "version": "0.0.0",
+  "description": "{{ extension_description }}",
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@10.11.1",
+  "repository": {
+    "type": "git",
+    "url": "git+{{ github_url }}.git"
+  },
+  "author": "Bruno Paz <oss@brunopaz.dev>",
+  "license": "MIT",
+  "bugs": {
+    "url": "{{ github_url }}/issues"
+  },
+  "homepage": "{{ github_url }}#readme",
+  "sideEffects": false,
+  "scripts": {
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "build": "pnpm run gschema:compile && tsc",
+    "watch": "tsc --watch",
+    "gschema:compile": "glib-compile-schemas schemas",
+    "pack": "bash scripts/pack.sh",
+    "ext:install": "bash scripts/install.sh",
+    "ext:enable": "gnome-extensions enable my-extension@example.com",
+    "clean": "rimraf dist my-extension.zip",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@eslint/js": "^9.28.0",
+    "eslint": "^9.28.0",
+    "eslint-config-prettier": "^10.1.5",
+    "globals": "^16.2.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.0",
+    "prettier": "^3.5.3",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.33.1"
+  },
+  "dependencies": {
+    "@girs/gjs": "4.0.0-beta.23",
+    "@girs/gnome-shell": "^48.0.2"
+  }
+}

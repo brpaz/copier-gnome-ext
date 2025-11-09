@@ -1,0 +1,4 @@
+# This file is used to define the rules that will be used to assign the correct reviewers
+# for each pull request.
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+* @brpaz

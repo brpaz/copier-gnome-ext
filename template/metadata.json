@@ -1,0 +1,10 @@
+{
+  "name": "{{ extension_name }}",
+  "description": "{{ extension_description }}",
+  "uuid": "{{extension_fqdn }}",
+  "url": "https://github.com/example/my-extension",
+  "settings-schema": "org.gnome.shell.extensions.{{extension_uid}}",
+  "shell-version": [
+    "48"
+  ]
+}

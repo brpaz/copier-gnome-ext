@@ -1,0 +1,47 @@
+# {{ extension_name }}
+
+> {{ extension_description }}
+
+## Getting Started
+
+### Installation
+
+1. Install the extension from the [GNOME Extensions website](https://extensions.gnome.org/extension/1234/gnome-extension-template/).
+
+## Development Guide
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18 or later)
+- [GJS](https://gjs.guide/) (v1.70 or later)
+- [GNOME Shell](https://www.gnome.org/) (v40 or later)
+
+### Setup
+
+1. Clone the repository:
+   ```bash
+   git clone {{ github_url }} {{ extension_fqdn }}
+   cd {{ extension_fqdn }}
+   ```
+2. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+3. Build the extension:
+   ```bash
+   pnpm run build
+   ```
+4. Install the extension:
+   ```bash
+   pnpm run install
+   ```
+5. Enable the extension:
+   ```bash
+   gnome-extensions enable {{ extension_fqdn }}
+   ```
+
+For more detailed instructions, refer to the [GJS guide](https://gjs.guide/extensions/development/creating.html#testing-the-extension).
+
+### Development Workflow
+
+TBD

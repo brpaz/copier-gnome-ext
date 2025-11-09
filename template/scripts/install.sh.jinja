@@ -1,0 +1,13 @@
+#!/bin/bash
+set -euo pipefail
+
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$ROOT_DIR"
+
+EXTENSION_DIR="$HOME/.local/share/gnome-shell/extensions/{{ extension_fqdn }}"
+
+bash scripts/pack.sh
+
+rm -rf "$EXTENSION_DIR"
+mkdir -p "$EXTENSION_DIR"
+mv dist/* "$EXTENSION_DIR"

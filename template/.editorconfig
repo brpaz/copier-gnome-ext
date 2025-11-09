@@ -1,0 +1,23 @@
+# EditorConfig helps maintain consistent coding styles
+# Prettier will handle most formatting, so keep this minimal and compatible
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.md]
+# Let Prettier handle markdown formatting; don't trim trailing whitespace
+trim_trailing_whitespace = false
+
+[*.{ts,tsx,js,jsx,json}]
+# Explicitly match common files in a TS project
+indent_style = space
+indent_size = 2
+
+[*.{yml,yaml}]
+indent_style = space
+indent_size = 2
