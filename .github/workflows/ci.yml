@@ -49,7 +49,9 @@ jobs:
           echo "Checking essential files in: $OUTPUT_DIR"
 
           REQUIRED_FILES=(
-            "test.txt"
+            "package.json"
+            "src/extension.ts"
+            "README.md"
           )
 
           MISSING=()
