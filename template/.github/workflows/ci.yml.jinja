@@ -75,7 +75,7 @@ jobs:
           pnpm run pack
 
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: ${{ env.EXTENSION_UID }}
           path: ${{ env.EXTENSION_UID }}.zip
@@ -92,7 +92,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: my-extension
 
