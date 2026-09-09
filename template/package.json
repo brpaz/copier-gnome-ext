@@ -45,7 +45,7 @@
     "typescript-eslint": "8.69.0"
   },
   "dependencies": {
-    "@girs/gjs": "4.6.0",
+    "@girs/gjs": "4.7.0",
     "@girs/gnome-shell": "^50.0.0"
   }
 }
