@@ -42,7 +42,7 @@
     "prettier": "3.9.8",
     "rimraf": "6.1.3",
     "typescript": "7.0.2",
-    "typescript-eslint": "8.70.0"
+    "typescript-eslint": "8.70.1"
   },
   "dependencies": {
     "@girs/gjs": "4.9.0",
